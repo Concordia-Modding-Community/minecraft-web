@@ -1,0 +1,3 @@
+main: com.minecraft.plugin.App
+name: BlankPlugin
+version: 0.1
