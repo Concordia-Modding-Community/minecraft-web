@@ -1,20 +1,34 @@
 version: '3'
 
 services:
-  spigot-server:
-    container_name: spigot-server
+  spigot:
+    container_name: mc-spigot
     build:
       context: ./docker
       dockerfile: Dockerfile
     environment:
       - INIT_MEMORY=1G
       - MAX_MEMORY=2G
-      - EULA=false
-      - OP=
+      - EULA=true
+      - OP=alexandre_lavoie
     ports:
       - '25565:25565'
     volumes:
       - ./plugins:/usr/server/plugins
+    networks:
+      - minecraft-network
+  express:
+    container_name: express
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - '80:3000'
+    command: npm start
+    volumes:
+      - ./web/src:/usr/app/src
+      - ./web/views:/usr/app/views
+      - ./web/public:/usr/app/public
     networks:
       - minecraft-network
 

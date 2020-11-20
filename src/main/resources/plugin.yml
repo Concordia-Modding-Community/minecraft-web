@@ -1,3 +1,5 @@
-main: com.minecraft.plugin.App
-name: BlankPlugin
+name: WebCraft
 version: 0.1
+description: Spigot + Socket.io
+author: alexandre_lavoie
+main: com.minecraft.plugin.Plugin

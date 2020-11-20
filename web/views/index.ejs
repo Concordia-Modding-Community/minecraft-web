@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <%- include('imports.ejs') -%>
+</head>
+
+<body>
+    <%- include('nav.ejs') -%>
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col">
+                <div class="card" style="width: max-content; margin: 1em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Mode</h5>
+                        <p class="card-text">Sets the game mode of all players.</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" onclick="setGameMode('adventure')"
+                                class="btn btn-primary">Adventure</button>
+                            <button type="button" onclick="setGameMode('survival')"
+                                class="btn btn-primary">Survival</button>
+                            <button type="button" onclick="setGameMode('creative')"
+                                class="btn btn-primary">Creative</button>
+                            <button type="button" onclick="setGameMode('spectator')"
+                                class="btn btn-primary">Spectator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card" style="width: max-content; margin: 1em;">
+                    <div class="card-body">
+                        <h5 class="card-title">Time</h5>
+                        <p class="card-text">Sets the world time for all worlds.</p>
+                        <div class="input-group mb-3">
+                            <input type="number" id="time" class="form-control" placeholder="1000" aria-label="time"
+                                aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="button-addon2" onclick="setTime()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: max-content; margin: 1em">
+                    <div class="card-body">
+                        <h5 class="card-title">Gravity</h5>
+                        <p class="card-text">Sets the gravity of all entities.</p>
+                        <div style="width: 100%; display: grid; justify-content: center;">
+                            <div class="btn-group" role="group">
+                                <button type="button" onclick="setGravity(false)"
+                                    class="btn btn-primary">Off</button>
+                                <button type="button" onclick="setGravity(true)"
+                                    class="btn btn-primary">On</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -23,9 +23,12 @@
 hs_err_pid*
 
 # Maven
-target
-plugins
+target/
+plugins/
 .settings
 .classpath
 .project
 .vscode
+
+# Spigot
+spigot/
